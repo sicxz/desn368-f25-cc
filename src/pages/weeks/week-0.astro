@@ -15,29 +15,51 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </nav>
 
     <main class="course-content two-column">
-        <div class="main-content">
-            <section class="card">
-                <h1>Week 0: S3tup & 0nb04rd1ng</h1>
+        <div class="main-content fade-in">
+            <section class="card accent-block card-enhanced">
+                <div class="color-bar color-bar-red"></div>
+                <h1>
+                    <span class="icon-enhanced icon-primary">
+                        <i class="octicon octicon-rocket" aria-hidden="true"></i>
+                    </span>
+                    Week 0: S3tup & 0nb04rd1ng
+                    <span class="badge badge-success">Available</span>
+                </h1>
                 <p class="subtitle">Wednesday, September 24, 2025 • 10:00 AM - 12:20 PM</p>
 
-                <div class="alert" style="background: var(--ewu-red); color: white; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+                <div class="alert accent-block-subtle" style="background: var(--accent-red-light); border: 1px solid var(--accent-red); color: var(--text-primary); padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+                    <span class="icon-enhanced">
+                        <i class="octicon octicon-alert" aria-hidden="true"></i>
+                    </span>
                     <strong>First Day Reality:</strong> You'll be confused. You'll feel overwhelmed. That's completely normal and expected. Every professional developer started here.
                 </div>
 
                 <h2>Today's Mission</h2>
                 <p>Get your development environment running and make your first commit to GitHub. That's it. Everything else can wait.</p>
 
-                <h2>Part 1: GitHub Setup (10:20-11:00)</h2>
+            </section>
+
+            <div class="section-divider with-icon"></div>
+
+            <section class="card card-enhanced">
+                <h2>
+                    <span class="icon-enhanced">
+                        <i class="octicon octicon-mark-github" aria-hidden="true"></i>
+                    </span>
+                    Part 1: GitHub Setup
+                    <span class="badge badge-secondary">10:20-11:00</span>
+                </h2>
                 <ol>
                     <li><strong>Create GitHub Account</strong>
                         <ul>
+                            <li>Go to <a href="https://github.com/signup" target="_blank">Sign up for GitHub</a></li>
                             <li>Use a professional username</li>
                             <li>Add your real name to your profile</li>
                         </ul>
                     </li>
                     <li><strong>Fork the Course Workspace</strong>
                         <ul>
-                            <li>Go to <a href="https://github.com/sicxz/DESN368-code-design-workspace">Course Workspace Repository</a></li>
+                            <li>Go to <a href="https://github.com/sicxz/DESN368-code-design-workspace" target="_blank">Course Workspace Repository</a></li>
                             <li>Click "Fork" button (top right)</li>
                             <li>Rename to: <code>desn368-yourname</code></li>
                         </ul>
@@ -51,21 +73,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                     </li>
                 </ol>
 
-                <h2>Part 2: Essential Tools (11:10-11:50)</h2>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section class="card accent-block card-enhanced">
+                <h2>
+                    <span class="icon-enhanced">
+                        <i class="octicon octicon-tools" aria-hidden="true"></i>
+                    </span>
+                    Part 2: Essential Tools
+                    <span class="badge badge-secondary">11:10-11:50</span>
+                </h2>
 
                 <!-- VS Code Block -->
                 <div class="tool-block">
                     <h4>VS Code</h4>
-                    <p>Your code editor for the semester</p>
-                    <a href="https://code.visualstudio.com/" class="btn btn-primary">Download VS Code</a>
+                    <p>Your code editor for the quarter</p>
+                    <a href="https://code.visualstudio.com/" class="btn btn-primary" target="_blank">Download VS Code</a>
                 </div>
 
-                <!-- CodePen Block -->
+                <!-- FireFox Code Block -->
+                <div class="tool-block">
+                    <h4>FireFox Browser</h4>
+                    <p>Your browser for the quarter</p>
+                    <a href="https://www.firefox.com/en-US/browsers/desktop/" class="btn btn-primary" target="_blank">Download VS Code</a>
+                </div>
+
+                <!-- CodePen Block 
                 <div class="tool-block">
                     <h4>CodePen</h4>
                     <p>Online playground for quick experiments</p>
-                    <a href="https://codepen.io/" class="btn btn-outline">Create Account</a>
+                    <a href="https://codepen.io/" class="btn btn-outline" target="_blank">Create Account</a>
                 </div>
+
+                Figma Block 
+                <div class="tool-block">
+                    <h4>CodePen</h4>
+                    <p>Online playground for quick experiments</p>
+                    <a href="https://codepen.io/" class="btn btn-outline" target="_blank">Create Account</a>
+                </div>
+                -->
+
+
 
                 <h2>Part 3: Your First HTML (11:50-12:15)</h2>
                 <p>We'll create this together in class:</p>
@@ -129,13 +179,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 <h3>Quick Links</h3>
                 <ul style="list-style: none; padding: 0;">
                     <li style="margin-bottom: 8px;">
-                        <a href="https://github.com/sicxz/DESN368-code-design-workspace">📁 Course Template Repo</a>
+                        <a href="https://github.com/sicxz/DESN368-code-design-workspace" target="_blank">📁 Course Template Repo</a>
                     </li>
                     <li style="margin-bottom: 8px;">
-                        <a href="https://code.visualstudio.com/">💻 Download VS Code</a>
+                        <a href="https://code.visualstudio.com/" target="_blank">💻 Download VS Code</a>
                     </li>
                     <li style="margin-bottom: 8px;">
-                        <a href="https://github.com/">🐙 GitHub.com</a>
+                        <a href="https://github.com/" target="_blank">🐙 GitHub.com</a>
                     </li>
                 </ul>
             </section>

@@ -13,6 +13,9 @@ const { title = "DESN368: Code+Design 1" } = Astro.props;
     <title>{title}</title>
     <!-- Import your existing CSS -->
     <!-- CSS is automatcially injected by the import -->
+
+    <!-- Octicons CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/octicons-css/octicons.min.css">
 </head>
 <body>
     <header class="course-header">
@@ -44,8 +47,8 @@ const { title = "DESN368: Code+Design 1" } = Astro.props;
                     </div>
                 </div>
                 <div class="header-actions">
-                    <button class="btn-fork">Fork Course</button>
-                    <button class="btn btn-start">Start Learning</button>
+                    <a href="https://canvas.ewu.edu/courses/1839909" class="btn-fork" target="_blank">Canvas</a>
+                    <a href="https://app.milanote.com/1UHeqL1Wevfm3F?p=jHMkPcMB5W4" class="btn btn-start" target="_blank">Milanote</a>
                 </div>
             </div>
             <div class="course-meta">
