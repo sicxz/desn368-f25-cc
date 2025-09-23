@@ -135,6 +135,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Mobile Notice Banner */
+.mobile-notice {
+  background: #f6f8fa;
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 0;
+  display: none;
+}
+
+.mobile-notice-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mobile-notice-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.mobile-notice-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-default);
+}
+
+.mobile-notice-close:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.mobile-notice.hidden {
+  display: none;
+}
+
+/* Show notice on mobile/tablet devices */
+@media (max-width: 968px) {
+  .mobile-notice {
+    display: block;
+  }
+}
+
 /* Course Header */
 .course-header {
   background: var(--gradient-header);
