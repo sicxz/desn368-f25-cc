@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/styles.css';
+
+// Define the weeks data directly for now
+const weeks = [
+    { number: 0, title: "S3tup & 0nb04rd1ng", subtitle: "Environment Configuration - Dev tools mastery", status: "available" },
+    { number: 1, title: "Th3 F1r5t T4g", subtitle: "Single Tag Mastery - Understanding HTML anatomy", status: "locked"},
+    { number: 2, title: "D0cum3nt 4rch1t3ctur3", subtitle: "Structure Before Style - Valid HTML foundations", status: "locked" },
+    { number: 3, title: "Th3 C4sc4d3 B3g1n5", subtitle: "CSS Separation of Concerns", status: "locked" },
+    { number: 4, title: "F0rm5 & 1nput5", subtitle: "User Interaction Patterns", status: "locked" },
+    { number: 5, title: "Fl3xb0x M45t3ry", subtitle: "One-dimensional Layouts", status: "locked" },
+    { number: 6, title: "Tr1but3 P4g3", subtitle: "First Complete Project", status: "locked" },
+    { number: 7, title: "Gr1d Sy5t3m5", subtitle: "Two-dimensional Thinking", status: "locked" },
+    { number: 8, title: "Pr0duct L4nd1ng", subtitle: "Professional Product Page", status: "locked" },
+    { number: 9, title: "P0rtf0l10 Sy5t3m", subtitle: "Personal Brand Development (2 weeks)", status: "locked" },
+    { number: 11, title: "Sh1p 1t", subtitle: "Launch & Deploy", status: "locked" }
+];
+---
+
+<BaseLayout title="Home - DESN368">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb">
+                <span class="breadcrumb-current">Course Overview</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="course-content two-column">
+        <div class="main-content">
+            <!-- Course Introduction -->
+            <section class="card card-accent">
+                <h2>
+                    <i data-lucide="hammer" style="width: 24px; height: 24px; margin-right: 8px; color: var(--brand-red);"></i>
+                    Welcome to the Real Thing
+                </h2>
+                <p>Most people live on the <strong>surface</strong> of the web—scrolling, clicking, tapping. But beneath all of that, there's <span style="color: var(--brand-primary); font-weight: 600;">structure</span>. <span style="color: var(--brand-red); font-weight: 600;">Logic</span>. <strong>Craft</strong>.</p>
+
+                <p>In this class, you'll learn to read and write the <code>source code</code> that powers the modern internet. Not with drag-and-drop tools. Not through shortcuts. But with the foundational tools—<span style="background: rgba(212, 24, 61, 0.1); color: var(--brand-red); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">HTML</span> and <span style="background: rgba(3, 2, 19, 0.1); color: var(--brand-primary); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">CSS</span>—the way it actually works.</p>
+
+                <p>You'll start from <strong>nothing</strong>. Build from <strong>scratch</strong>. And by the end, you won't just have a few websites. You'll have a <span style="color: var(--brand-primary); font-weight: 600;">lens</span>—a way of seeing and shaping digital space that most people never access.</p>
+
+                <div style="padding: 20px; background: var(--gradient-accent); border-radius: 8px; border-left: 4px solid var(--brand-red); margin: 20px 0;">
+                    <p style="font-style: italic; font-size: 18px; font-weight: 500; margin: 0;">
+                        💻 This isn't a bootcamp. This isn't a YouTube tutorial. <span style="color: var(--brand-red); font-weight: 700;">This is the real thing.</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Student Pledge -->
+            <section class="card">
+                <h2>
+                    <i data-lucide="zap" style="width: 24px; height: 24px; margin-right: 8px; color: var(--brand-red);"></i>
+                    Student Pledge
+                </h2>
+                <div class="code-block">
+                    $ "I will not blindly copy and paste.<br>
+                    I will write my own tags.<br>
+                    I will read the source.<br>
+                    I will not fear the browser inspector.<br>
+                    I will know what my code does.<br>
+                    I will build with intent."
+                </div>
+            </section>
+
+            <!-- Course Structure -->
+            <section class="card">
+                <h2>
+                    <i data-lucide="layers" style="width: 24px; height: 24px; margin-right: 8px; color: var(--brand-primary);"></i>
+                    Course Structure: 11 Weeks of Foundation
+                </h2>
+                <div class="week-list">
+                    {weeks.map((week) => (
+                        <div class="week-item">
+                            <div>
+                                <h3>
+                                    {week.status === "available" ? (
+                                        <a href={`/weeks/week-${week.number}`}>
+                                            Week {week.number}: {week.title}
+                                        </a>
+                                    ) : (
+                                        `Week ${week.number}: ${week.title}`
+                                    )}
+                                </h3>
+                                <p>{week.subtitle}</p>
+                            </div>
+                            <span class={`week-status status-${week.status}`}>
+                                {week.status === "available" && week.assignments 
+                                    ? `${week.assignments} Assignments` 
+                                    : week.status === "available" 
+                                    ? "Available"
+                                    : "Coming Soon"}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <!-- Brick by Brick Method -->
+            <section class="card">
+                <h2>The "Brick by Brick" Method</h2>
+                
+                <h3>Micro-Skills Architecture</h3>
+                <p>Each assignment builds one tiny, specific skill that becomes the foundation for the next. You cannot proceed to Assignment B until you demonstrate mastery of Assignment A through multiple assessment gates.</p>
+                
+                <h3>Four Types of Mastery Gates</h3>
+                <ul>
+                    <li><strong>Technical Gate</strong> - Code validates and works perfectly</li>
+                    <li><strong>Conceptual Gate</strong> - Can explain why it works</li>
+                    <li><strong>Debug Gate</strong> - Can fix broken code</li>
+                    <li><strong>Teaching Gate</strong> - Can help a classmate understand</li>
+                </ul>
+
+                <h3>No Student Left Behind</h3>
+                <p>Multiple learning pathways accommodate different learning styles:</p>
+                <ul>
+                    <li><strong>Visual learners:</strong> Figma integration and visual diagrams</li>
+                    <li><strong>Kinesthetic learners:</strong> Hands-on coding from day one</li>
+                    <li><strong>Analytical learners:</strong> Deep documentation and technical specs</li>
+                    <li><strong>Social learners:</strong> Peer teaching and pair programming</li>
+                </ul>
+
+                <h3>Why This Works</h3>
+                <p>Traditional courses throw everything at you at once. You memorize, you forget. This course builds muscle memory. Each micro-skill becomes automatic before you move on. By Week 11, you won't have to think about syntax—your fingers will know.</p>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <!-- Quick Actions -->
+            <section class="card card-action">
+                <h3>
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 6px;">
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                    </svg>
+                    Quick Actions
+                </h3>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <a href="/weeks/week-0" class="btn btn-start">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 6px;">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                        </svg>
+                        Start Week 0
+                    </a>
+                    <a href="/syllabus" class="btn btn-secondary">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 6px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        View Syllabus
+                    </a>
+                    <a href="https://github.com/sicxz/desn368-f25" class="btn btn-secondary">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 6px;">
+                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
+                        </svg>
+                        GitHub Repo
+                    </a>
+                </div>
+            </section>
+
+            <!-- Course Tools -->
+            <section class="card">
+                <h3>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    Essential Tools
+                </h3>
+
+                <!-- VS Code Block -->
+                <div class="tool-block">
+                    <h4>VS Code</h4>
+                    <p>Your code editor for the semester</p>
+                    <a href="#" class="btn btn-primary">Download VS Code</a>
+                </div>
+
+                <!-- CodePen Block -->
+                <div class="tool-block">
+                    <h4>CodePen</h4>
+                    <p>Online playground for quick experiments</p>
+                    <a href="https://codepen.io/" class="btn btn-outline">Create Account</a>
+                </div>
+
+                <!-- Chrome DevTools Block -->
+                <div class="tool-block">
+                    <h4>Chrome DevTools</h4>
+                    <p>Browser inspector and debugging tools</p>
+                    <a href="#" class="btn btn-secondary">Learn DevTools</a>
+                </div>
+            </section>
+
+            <!-- Philosophy Quote -->
+            <section class="card card-accent" style="position: relative;">
+                <div style="position: absolute; top: 16px; right: 16px; opacity: 0.1; transform: rotate(12deg);">
+                    <i data-lucide="quote" style="width: 48px; height: 48px; color: var(--brand-primary);"></i>
+                </div>
+                <blockquote style="font-style: italic; font-weight: 500; line-height: 1.6; position: relative; z-index: 1; margin: 0;">
+                    <span style="font-size: 20px;">"</span>We're not making pretty pages. We're building <span style="color: var(--brand-primary); font-weight: 700;">digital infrastructure</span>.<span style="font-size: 20px;">"</span>
+                </blockquote>
+                <div style="margin-top: 12px; font-size: 12px; color: var(--text-muted);">— Course Philosophy</div>
+            </section>
+
+            <!-- Quick Reference -->
+            <section class="card">
+                <h3>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                    Quick Reference
+                </h3>
+
+                <!-- HTML Tags -->
+                <div class="reference-section">
+                    <button class="reference-toggle" onclick="toggleReference('html')">
+                        <span>HTML Tags</span>
+                        <svg class="chevron" id="html-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="reference-content" id="html-content">
+                        <div class="reference-item">
+                            <span class="tag">&lt;h1&gt;</span>
+                            <span class="desc">Main heading</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">&lt;p&gt;</span>
+                            <span class="desc">Paragraph</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">&lt;a&gt;</span>
+                            <span class="desc">Link</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">&lt;img&gt;</span>
+                            <span class="desc">Image</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">&lt;div&gt;</span>
+                            <span class="desc">Container</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS Properties -->
+                <div class="reference-section">
+                    <button class="reference-toggle" onclick="toggleReference('css')">
+                        <span>CSS Properties</span>
+                        <svg class="chevron" id="css-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="reference-content" id="css-content">
+                        <div class="reference-item">
+                            <span class="tag">color</span>
+                            <span class="desc">Text color</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">background</span>
+                            <span class="desc">Background color</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">font-size</span>
+                            <span class="desc">Text size</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">margin</span>
+                            <span class="desc">Outside spacing</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="tag">padding</span>
+                            <span class="desc">Inside spacing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources -->
+            <section class="card card-resource">
+                <h3>External Resources</h3>
+                <ul style="list-style: none; padding: 0; font-size: 13px;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://validator.w3.org/">W3C Validator</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://css-tricks.com/">CSS-Tricks</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://codepen.io/">CodePen</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+</BaseLayout>

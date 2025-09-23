@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Syllabus - DESN368">
+    <main class="course-content two-column">
+        <div class="main-content">
+            <!-- Course Information -->
+            <section class="card">
+                <h2>Course Information</h2>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px;">
+                    <strong>Course:</strong> <span>DESN368 - Code+Design 1</span>
+                    <strong>Term:</strong> <span>Fall 2025 (09/25 - 12/13, 2025)</span>
+                    <strong>Credits:</strong> <span>5</span>
+                    <strong>Schedule:</strong> <span>Tuesday + Thursday, 10:00a - 12:20p</span>
+                    <strong>Location:</strong> <span>Catalyst Room 206</span>
+                </div>
+            </section>
+
+            <!-- Instructor -->
+            <section class="card">
+                <h2>Instructor</h2>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px;">
+                    <strong>Professor:</strong> <span>Travis Masingale</span>
+                    <strong>Email:</strong> <span><a href="mailto:tmasingale@ewu.edu">tmasingale@ewu.edu</a></span>
+                    <strong>Office:</strong> <span>Catalyst 159</span>
+                </div>
+
+                <h3>Office Hours</h3>
+                <ul>
+                    <li><strong>Wednesday:</strong> 9:00-10:00a</li>
+                    <li><strong>Tuesday/Thursday:</strong> 12:30-2:00p</li>
+                    <li><strong>By Appointment:</strong> <a href="https://calendly.com/tmasingale">Schedule via Calendly</a></li>
+                </ul>
+            </section>
+
+            <!-- Course Description -->
+            <section class="card">
+                <h2>Course Description</h2>
+                <p>This course introduces you to the actual craft of building for the web. Not with shortcuts or frameworks, but with fundamental HTML and CSS—understanding how the web actually works at the source level.</p>
+                
+                <p>You'll develop fluency in reading and writing code, building responsive layouts, and creating interactive experiences. More importantly, you'll learn to think systematically about digital design and develop the problem-solving skills essential for web development.</p>
+            </section>
+
+            <!-- Learning Objectives -->
+            <section class="card">
+                <h2>Learning Objectives</h2>
+                
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Write semantic, valid HTML from memory</li>
+                    <li>Implement complex layouts with CSS Grid and Flexbox</li>
+                    <li>Build responsive designs that work across devices</li>
+                    <li>Use version control (Git) for all projects</li>
+                    <li>Debug code using browser developer tools</li>
+                </ul>
+
+                <h3>Design Skills</h3>
+                <ul>
+                    <li>Apply typography and color theory to web interfaces</li>
+                    <li>Create accessible, user-centered designs</li>
+                    <li>Understand the relationship between design and code</li>
+                </ul>
+
+                <h3>Professional Skills</h3>
+                <ul>
+                    <li>Read and understand documentation</li>
+                    <li>Break down complex problems into manageable steps</li>
+                    <li>Collaborate using industry-standard tools</li>
+                    <li>Build a professional portfolio website</li>
+                </ul>
+            </section>
+
+            <!-- Grading -->
+            <section class="card">
+                <h2>Grading Breakdown</h2>
+                <div style="display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 16px 0;">
+                    <span>Weekly Micro-Assignments</span>
+                    <span style="font-weight: 600; font-family: var(--mono-font);">30%</span>
+                    
+                    <span>Major Projects (3)</span>
+                    <span style="font-weight: 600; font-family: var(--mono-font);">40%</span>
+                    
+                    <span>Participation & Peer Teaching</span>
+                    <span style="font-weight: 600; font-family: var(--mono-font);">20%</span>
+                    
+                    <span>Final Portfolio</span>
+                    <span style="font-weight: 600; font-family: var(--mono-font);">10%</span>
+                </div>
+
+                <h3>Mastery Gates System</h3>
+                <p>Each assignment must pass through four gates before you can proceed:</p>
+                <ol>
+                    <li><strong>Technical Gate:</strong> Code validates and works</li>
+                    <li><strong>Conceptual Gate:</strong> Can explain why it works</li>
+                    <li><strong>Debug Gate:</strong> Can fix broken versions</li>
+                    <li><strong>Teaching Gate:</strong> Can help others understand</li>
+                </ol>
+
+                <h3>Grade Scale</h3>
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px;">
+                    <div style="text-align: center; padding: 8px; background: var(--color-canvas-subtle); border-radius: 4px;">
+                        <div style="font-weight: 600;">A</div>
+                        <div style="color: var(--color-fg-muted); font-size: 12px;">90-100%</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: var(--color-canvas-subtle); border-radius: 4px;">
+                        <div style="font-weight: 600;">B</div>
+                        <div style="color: var(--color-fg-muted); font-size: 12px;">80-89%</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: var(--color-canvas-subtle); border-radius: 4px;">
+                        <div style="font-weight: 600;">C</div>
+                        <div style="color: var(--color-fg-muted); font-size: 12px;">70-79%</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: var(--color-canvas-subtle); border-radius: 4px;">
+                        <div style="font-weight: 600;">D</div>
+                        <div style="color: var(--color-fg-muted); font-size: 12px;">60-69%</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: var(--color-canvas-subtle); border-radius: 4px;">
+                        <div style="font-weight: 600;">F</div>
+                        <div style="color: var(--color-fg-muted); font-size: 12px;">0-59%</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Policies -->
+            <section class="card">
+                <h2>Course Policies</h2>
+
+                <h3>Attendance</h3>
+                <p>This is a hands-on, studio-style course. Being present is crucial. More than two unexcused absences may result in grade reduction. If you must miss class, notify me in advance.</p>
+
+                <h3>Late Work</h3>
+                <p>Assignments build on each other—you cannot proceed until previous work is complete. Late submissions delay your progress. Extensions are available for documented emergencies.</p>
+
+                <h3>Academic Integrity</h3>
+                <p>You must write your own code. While you can reference resources and get help, submitting code you don't understand or didn't write is plagiarism. When in doubt, cite your sources.</p>
+
+                <h3>AI Policy</h3>
+                <p>AI tools (ChatGPT, Copilot, etc.) are banned for assignments. You're here to learn the craft, not to have machines do it for you. Using AI for assignments will result in having to redo the work.</p>
+
+                <h3>Accessibility</h3>
+                <p>Students with documented disabilities should meet with me ASAP to discuss accommodations. All discussions remain confidential. Contact Disability Support Services for documentation.</p>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <!-- Quick Info -->
+            <section class="card">
+                <h3>Quick Info</h3>
+                <div style="font-size: 13px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong>Class Time:</strong><br>
+                        Tue/Thu 10:00a-12:20p
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong>Location:</strong><br>
+                        Catalyst 206
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong>Office Hours:</strong><br>
+                        Wed 9-10a<br>
+                        Tue/Thu 12:30-2p
+                    </div>
+                </div>
+            </section>
+
+            <!-- Required Tools -->
+            <section class="card">
+                <h3>Required Tools</h3>
+                <ul style="list-style: none; padding: 0; font-size: 13px;">
+                    <li style="margin-bottom: 8px;">
+                        <strong>Text Editor:</strong><br>
+                        VS Code (free)
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <strong>Browser:</strong><br>
+                        Chrome + DevTools
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <strong>Version Control:</strong><br>
+                        Git + GitHub account
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <strong>Design:</strong><br>
+                        Figma (free tier)
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Important Dates -->
+            <section class="card">
+                <h3>Important Dates</h3>
+                <div style="font-size: 13px;">
+                    <div style="margin-bottom: 8px;">
+                        <strong>First Day:</strong><br>
+                        September 25, 2025
+                    </div>
+                    <div style="margin-bottom: 8px;">
+                        <strong>Project 1 Due:</strong><br>
+                        October 23, 2025
+                    </div>
+                    <div style="margin-bottom: 8px;">
+                        <strong>Project 2 Due:</strong><br>
+                        November 20, 2025
+                    </div>
+                    <div style="margin-bottom: 8px;">
+                        <strong>Portfolio Due:</strong><br>
+                        December 11, 2025
+                    </div>
+                    <div style="margin-bottom: 8px;">
+                        <strong>Last Day:</strong><br>
+                        December 13, 2025
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="card">
+                <h3>Quick Actions</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a href="/" class="btn btn-primary">← Back to Hub</a>
+                    <a href="mailto:tmasingale@ewu.edu" class="btn btn-secondary">Email Professor</a>
+                    <a href="https://calendly.com/tmasingale" class="btn btn-secondary">Book Office Hours</a>
+                </div>
+            </section>
+        </aside>
+    </main>
+</BaseLayout>

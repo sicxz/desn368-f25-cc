@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Week 0: Setup - DESN368">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb">
+                <a href="/">Course Overview</a>
+                <span class="breadcrumb-separator">></span>
+                <span class="breadcrumb-current">Week 0: S3tup & 0nb04rd1ng</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="course-content two-column">
+        <div class="main-content">
+            <section class="card">
+                <h1>Week 0: S3tup & 0nb04rd1ng</h1>
+                <p class="subtitle">Wednesday, September 24, 2025 • 10:00 AM - 12:20 PM</p>
+
+                <div class="alert" style="background: var(--ewu-red); color: white; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+                    <strong>First Day Reality:</strong> You'll be confused. You'll feel overwhelmed. That's completely normal and expected. Every professional developer started here.
+                </div>
+
+                <h2>Today's Mission</h2>
+                <p>Get your development environment running and make your first commit to GitHub. That's it. Everything else can wait.</p>
+
+                <h2>Part 1: GitHub Setup (10:20-11:00)</h2>
+                <ol>
+                    <li><strong>Create GitHub Account</strong>
+                        <ul>
+                            <li>Use a professional username</li>
+                            <li>Add your real name to your profile</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fork the Course Workspace</strong>
+                        <ul>
+                            <li>Go to <a href="https://github.com/sicxz/DESN368-code-design-workspace">Course Workspace Repository</a></li>
+                            <li>Click "Fork" button (top right)</li>
+                            <li>Rename to: <code>desn368-yourname</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Make Your First Edit</strong>
+                        <ul>
+                            <li>Click on README.md</li>
+                            <li>Click pencil icon to edit</li>
+                            <li>Add your name and save (commit)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>Part 2: Essential Tools (11:10-11:50)</h2>
+
+                <!-- VS Code Block -->
+                <div class="tool-block">
+                    <h4>VS Code</h4>
+                    <p>Your code editor for the semester</p>
+                    <a href="https://code.visualstudio.com/" class="btn btn-primary">Download VS Code</a>
+                </div>
+
+                <!-- CodePen Block -->
+                <div class="tool-block">
+                    <h4>CodePen</h4>
+                    <p>Online playground for quick experiments</p>
+                    <a href="https://codepen.io/" class="btn btn-outline">Create Account</a>
+                </div>
+
+                <h2>Part 3: Your First HTML (11:50-12:15)</h2>
+                <p>We'll create this together in class:</p>
+                <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, I'm [your name]&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML file in DESN368!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </div>
+
+                <h2>Weekend Homework</h2>
+                <p>Complete by Sunday, September 28, 11:59 PM</p>
+                
+                <h3>Required:</h3>
+                <ul>
+                    <li>✅ Complete all tool setups in <code>setup/ONBOARDING-CHECKLIST.md</code></li>
+                    <li>✅ Update README with your tool links</li>
+                    <li>✅ Create <code>week0/about-me.html</code> with 5 facts about yourself</li>
+                    <li>✅ Submit your GitHub repository URL to Canvas</li>
+                </ul>
+
+                <h3>Optional Exploration:</h3>
+                <ul>
+                    <li>Install VS Code extensions (Live Server, Prettier)</li>
+                    <li>Apply for Figma Education account</li>
+                    <li>Start FreeCodeCamp HTML module</li>
+                    <li>Explore Chrome DevTools on your favorite website</li>
+                </ul>
+
+                <h2>Common Issues & Solutions</h2>
+                <div style="padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; margin: 1rem 0;">
+                    <strong>Can't find the Fork button?</strong><br>
+                    Make sure you're logged into GitHub first.
+                </div>
+                <div style="padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; margin: 1rem 0;">
+                    <strong>Repository won't rename?</strong><br>
+                    Go to Settings → Repository name → Rename
+                </div>
+                <div style="padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; margin: 1rem 0;">
+                    <strong>Confused about committing?</strong><br>
+                    Think of it as "Save with a note about what you changed"
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <section class="card">
+                <h3>Class Details</h3>
+                <p><strong>When:</strong> Wed, Sept 24<br>
+                <strong>Time:</strong> 10:00 AM - 12:20 PM<br>
+                <strong>Where:</strong> Catalyst 206</p>
+            </section>
+
+            <section class="card">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://github.com/sicxz/DESN368-code-design-workspace">📁 Course Template Repo</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://code.visualstudio.com/">💻 Download VS Code</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://github.com/">🐙 GitHub.com</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card" style="background: var(--matrix-green); color: var(--black);">
+                <h3>Success Tip</h3>
+                <p>Don't try to understand everything today. Just follow along, get the tools installed, and trust the process.</p>
+            </section>
+
+            <section class="card">
+                <h3>Need Help?</h3>
+                <p><strong>During Class:</strong> Raise your hand!<br>
+                <strong>This Weekend:</strong> Email me<br>
+                <strong>Office Hours:</strong> Mon 1-2pm</p>
+            </section>
+        </aside>
+    </main>
+</BaseLayout>
+
+<style>
+    .subtitle {
+        color: var(--color-fg-muted);
+        font-size: 14px;
+        margin-top: -0.5rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+    
+    .tool-grid h3 {
+        margin-top: 0;
+        color: var(--ewu-red);
+    }
+    
+    .alert {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+</style>
