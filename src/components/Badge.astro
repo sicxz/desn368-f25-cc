@@ -1,0 +1,18 @@
+---
+export interface Props {
+  variant?: 'success' | 'secondary' | 'warning' | 'info';
+  class?: string;
+}
+
+const { variant = 'secondary', class: className = '' } = Astro.props;
+
+const getBadgeClasses = () => {
+  const baseClass = 'badge';
+  const variantClass = `badge-${variant}`;
+  return [baseClass, variantClass, className].filter(Boolean).join(' ');
+};
+---
+
+<span class={getBadgeClasses()}>
+  <slot />
+</span>

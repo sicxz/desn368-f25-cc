@@ -1,0 +1,18 @@
+---
+export interface Props {
+  type: 'designer' | 'coder';
+  class?: string;
+}
+
+const { type, class: className = '' } = Astro.props;
+
+const classes = ['moment', `${type}-moment`, className].filter(Boolean).join(' ');
+
+const emoji = type === 'designer' ? '👨‍🎨' : '👨‍💻';
+const title = type === 'designer' ? 'Designer Moment' : 'Coder Moment';
+---
+
+<div class={classes}>
+  <h4>{emoji} {title}</h4>
+  <p><slot /></p>
+</div>

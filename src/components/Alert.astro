@@ -1,0 +1,45 @@
+---
+import Icon from './Icon.astro';
+
+export interface Props {
+  variant?: 'info' | 'warning' | 'danger' | 'success' | 'tip';
+  icon?: string;
+  iconSize?: number;
+  class?: string;
+}
+
+const {
+  variant = 'info',
+  icon,
+  iconSize = 20,
+  class: className = ''
+} = Astro.props;
+
+const getAlertClasses = () => {
+  const baseClass = 'alert';
+  const classes = [baseClass];
+
+  if (variant === 'tip') classes.push('alert-tip');
+  else if (variant !== 'info') classes.push(`alert-${variant}`);
+
+  if (className) classes.push(className);
+
+  return classes.join(' ');
+};
+
+const getAlertStyles = () => {
+  if (variant === 'info') {
+    return 'background: var(--accent-red-light); border: 1px solid var(--accent-red); color: var(--text-primary); padding: 1rem; border-radius: 6px; margin: 2rem 0;';
+  }
+  return '';
+};
+---
+
+<div class={getAlertClasses()} style={getAlertStyles()}>
+  {icon && (
+    <span class="icon-enhanced">
+      <Icon name={icon} size={iconSize} />
+    </span>
+  )}
+  <slot />
+</div>

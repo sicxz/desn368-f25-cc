@@ -1,5 +1,38 @@
 /* DESN368 Course Hub - Modern LMS Design */
 
+/* Icon Component Styles */
+.btn-icon {
+  margin-right: 8px;
+}
+
+.section-icon {
+  margin-right: 8px;
+}
+
+.quote-icon {
+  color: var(--brand-primary) !important;
+}
+
+.lucide {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.course-title-icon {
+  stroke: #b7142e !important;
+  color: #b7142e;
+}
+
+/* Ensure course icon container doesn't interfere */
+.course-icon svg {
+  display: block;
+  stroke: #b7142e !important;
+}
+
+.badge-icon {
+  margin-right: 4px;
+}
+
 :root {
   /* EWU Eagle Brand Color Palette */
   --bg-primary: #fdfffc;
@@ -72,7 +105,7 @@
 
   /* UI Colors */
   --border-color: rgba(57, 62, 65, 0.2);
-  --border-light: rgba(57, 62, 65, 0.1);
+  --border-light: rgba(57, 62, 65, 0.15);
   --border-subtle: rgba(57, 62, 65, 0.08);
   --border-accent: var(--brand-primary);
 
@@ -106,9 +139,9 @@
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
-  --space-4: 24px;
+  --space-4: 16px;
   --space-5: 32px;
-  --space-6: 40px;
+  --space-6: 24px;
   --space-7: 48px;
   --space-8: 64px;
 
@@ -221,9 +254,15 @@ body {
 }
 
 .course-icon {
-  font-size: 32px;
-  line-height: 1;
+  display: flex;
+  align-items: center;
   margin-top: 4px;
+}
+
+.course-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: #b7142e !important;
 }
 
 .course-title {
@@ -858,8 +897,9 @@ code {
     gap: 8px;
   }
 
-  .course-icon {
-    font-size: 24px;
+  .course-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .course-title {
@@ -880,8 +920,8 @@ code {
 /* Section Dividers */
 .section-divider {
   height: 1px;
-  background: var(--border-light);
-  margin: var(--space-6) 0;
+  background: var(--border-color);
+  margin: var(--space-4) 0;
 }
 
 /* Badge Elements */

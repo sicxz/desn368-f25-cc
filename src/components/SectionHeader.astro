@@ -1,0 +1,39 @@
+---
+import Icon from './Icon.astro';
+import Badge from './Badge.astro';
+
+export interface Props {
+  level?: 1 | 2 | 3;
+  icon?: string;
+  iconSize?: number;
+  badge?: {
+    text: string;
+    variant?: 'success' | 'secondary' | 'warning' | 'info';
+  };
+  class?: string;
+}
+
+const {
+  level = 2,
+  icon,
+  iconSize = 20,
+  badge,
+  class: className = ''
+} = Astro.props;
+
+const Tag = `h${level}` as any;
+---
+
+<Tag class={className}>
+  {icon && (
+    <span class="icon-enhanced">
+      <Icon name={icon} size={iconSize} />
+    </span>
+  )}
+  <slot />
+  {badge && (
+    <Badge variant={badge.variant}>
+      {badge.text}
+    </Badge>
+  )}
+</Tag>
