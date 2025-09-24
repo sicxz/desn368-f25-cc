@@ -8,7 +8,9 @@ import Icon from '../components/Icon.astro';
     <nav class="breadcrumb-nav">
         <div class="breadcrumb-container">
             <div class="breadcrumb">
-                <span class="breadcrumb-current">Course Overview > Syllabus</span>
+                <a href="/">Course Overview</a>
+                <span class="breadcrumb-separator">></span>
+                <span class="breadcrumb-current">Syllabus</span>
             </div>
         </div>
     </nav>
@@ -353,7 +355,7 @@ import Icon from '../components/Icon.astro';
                     Quick Actions
                 </h3>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <span class="btn btn-primary" style="opacity: 0.5; cursor: not-allowed;">← Back to Hub (Available Sept 24)</span>
+                    <a href="/" class="btn btn-primary">← Back to Hub</a>
 
                     <a href="https://docs.google.com/document/d/1qGVxC5Y49uTHjlFmPVFvN7inQ3UmgJuQsH5wCrZYQ64/edit?usp=sharing" class="btn btn-primary" target="_blank">EWU Syllabus Statements</a>
 
