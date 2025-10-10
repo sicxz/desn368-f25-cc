@@ -7,7 +7,7 @@ import '../styles/styles.css';
 const weeks = [
     { number: 0, title: "S3tup & 0nb04rd1ng", subtitle: "Environment Configuration - Dev tools mastery", status: "available" },
     { number: 1, title: "HTML Fundamentals & Internet Basics", subtitle: "Understanding the Internet & HTML Foundations", status: "available"},
-    { number: 2, title: "D0cum3nt 4rch1t3ctur3", subtitle: "Structure Before Style - Valid HTML foundations", status: "locked" },
+    { number: 2, title: "D0cum3nt 4rch1t3ctur3", subtitle: "Structure Before Style - Valid HTML foundations", status: "available" },
     { number: 3, title: "Th3 C4sc4d3 B3g1n5", subtitle: "CSS Separation of Concerns", status: "locked" },
     { number: 4, title: "F0rm5 & 1nput5", subtitle: "User Interaction Patterns", status: "locked" },
     { number: 5, title: "Fl3xb0x M45t3ry", subtitle: "One-dimensional Layouts", status: "locked" },
@@ -259,9 +259,9 @@ const weeks = [
                         <Icon name="book" size={16} class="btn-icon" />
                         View Syllabus
                     </a>
-                    <a href="/weeks/week-1" class="btn btn-start">
+                    <a href="/weeks/week-2" class="btn btn-start">
                         <Icon name="play" size={16} class="btn-icon" />
-                        Start Week 1
+                        Start Week 2
                     </a>
                     
                     <a href="https://github.com/sicxz/desn368-f25" class="btn btn-secondary" target="_blank">
@@ -292,11 +292,26 @@ const weeks = [
                     <a href="https://codepen.io/" class="btn btn-outline" target="_blank">Create Account</a>
                 </div>
 
-                <!-- Chrome DevTools Block -->
-                <div class="tool-block">
-                    <h4>Chrome DevTools</h4>
-                    <p>Browser inspector and debugging tools</p>
-                    <a href="#" class="btn btn-secondary">Learn DevTools</a>
+                <!-- Firefox DevTools Block -->
+                <div class="tool-block-mozilla">
+                    <a href="https://firefox-source-docs.mozilla.org/devtools-user/" class="tool-block-mozilla-header" target="_blank">Learn Firefox DevTools</a>
+                    <div class="tool-block-mozilla-body">
+                        <p><a href="https://firefox-source-docs.mozilla.org/devtools-user/" class="devtools-link" target="_blank">Firefox Developer Tools</a> is a comprehensive set of web developer tools built directly into Firefox. Inspect, debug, and optimize your HTML, CSS, and JavaScript.</p>
+
+                        <div class="mozilla-note">
+                            <div class="mozilla-note-content">
+                                <svg class="mozilla-note-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="16" x2="12" y2="12"/>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                </svg>
+                                <div class="mozilla-note-body">
+                                    <strong>Note</strong>
+                                    <p>If you are just getting started with web development and browser developer tools, check out our <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools" target="_blank">What are browser developer tools?</a> guide for good starting points.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
