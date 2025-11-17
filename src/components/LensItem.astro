@@ -1,0 +1,16 @@
+---
+export interface Props {
+  type: 'designer' | 'coder';
+  title: string;
+  class?: string;
+}
+
+const { type, title, class: className = '' } = Astro.props;
+
+const classes = ['lens-item', type, className].filter(Boolean).join(' ');
+---
+
+<div class={classes}>
+  <h3>{title}</h3>
+  <p><slot /></p>
+</div>

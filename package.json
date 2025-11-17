@@ -1,0 +1,16 @@
+{
+  "name": "starry-star",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.6",
+    "astro": "^5.13.10",
+    "lucide-static": "^0.544.0"
+  }
+}

@@ -1,0 +1,137 @@
+---
+// This is the "frontmatter" - JavaScript runs here
+import '../styles/styles.css';
+import Icon from '../components/Icon.astro';
+
+const { title = "DESN368: Code+Design 1" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Import your existing CSS -->
+    <!-- CSS is automatcially injected by the import -->
+
+</head>
+<body>
+    <!-- Mobile Notice Banner -->
+    <div id="mobile-notice" class="mobile-notice">
+        <div class="mobile-notice-content">
+            <span class="mobile-notice-text">
+                📱 Best viewed on desktop. Mobile navigation available at bottom.
+            </span>
+            <button class="mobile-notice-close" onclick="dismissNotice()" aria-label="Dismiss notice">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                    <path d="M6.697 6l3.849-3.849a.5.5 0 1 0-.707-.707L6 5.293 2.151 1.444a.5.5 0 1 0-.707.707L5.293 6 1.444 9.849a.5.5 0 1 0 .707.707L6 6.707l3.849 3.849a.5.5 0 1 0 .707-.707L6.707 6z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <header class="course-header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="course-title-group">
+                    <div class="course-icon">
+                        <Icon name="book" size={32} class="course-title-icon" />
+                    </div>
+                    <div>
+                        <h1 class="course-title">
+                            DESN368: Code+Design 1
+                            <span class="course-badge">
+                                <Icon name="zap" size={14} class="badge-icon" />
+                                Fall 2025
+                            </span>
+                        </h1>
+                        <p class="course-subtitle">
+                            <span style="color: var(--brand-red); font-weight: 600;">Brick</span> by
+                            <span style="color: var(--brand-red); font-weight: 600;">Brick</span>.
+                            <span style="color: var(--brand-primary); font-weight: 600;">Tag</span> by
+                            <span style="color: var(--brand-primary); font-weight: 600;">Tag</span>.
+                            <span style="font-weight: 600;">Source-Level Fluency</span>.
+                        </p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="https://canvas.ewu.edu/courses/1839909" class="btn-fork" target="_blank">Canvas</a>
+                    <a href="https://app.milanote.com/1UHeqL1Wevfm3F?p=jHMkPcMB5W4" class="btn btn-start" target="_blank">Milanote</a>
+                </div>
+            </div>
+            <div class="course-meta">
+                <span class="meta-item">
+                    <svg width="16" height="16" fill="none" stroke="var(--brand-primary)" viewBox="0 0 24 24" style="margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                    </svg>
+                    11 students
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" fill="none" stroke="var(--brand-red)" viewBox="0 0 24 24" style="margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2v0M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+                    </svg>
+                    11 weeks
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" fill="none" stroke="var(--text-muted)" viewBox="0 0 24 24" style="margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    5 hours/week:in-class 10 hours/week:at home 
+                </span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- This is where page content goes -->
+    <slot />
+
+    <script>
+        // Quick Reference toggle functionality
+        function toggleReference(section) {
+            const content = document.getElementById(section + '-content');
+            const chevron = document.getElementById(section + '-chevron');
+
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                chevron.classList.remove('rotated');
+            } else {
+                content.classList.add('expanded');
+                chevron.classList.add('rotated');
+            }
+        }
+
+        // Mobile notice dismiss functionality
+        function dismissNotice() {
+            const notice = document.getElementById('mobile-notice');
+            notice.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            notice.style.opacity = '0';
+            notice.style.transform = 'translateY(-100%)';
+
+            setTimeout(() => {
+                notice.style.display = 'none';
+            }, 300);
+
+            // Remember user preference
+            localStorage.setItem('mobileNoticeDismissed', 'true');
+        }
+
+        // Check if notice was previously dismissed
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('mobileNoticeDismissed') === 'true') {
+                const notice = document.getElementById('mobile-notice');
+                notice.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+export interface Props {
+  class?: string;
+  variant?: 'default' | 'enhanced' | 'accent' | 'accent-subtle';
+}
+
+const { class: className = '', variant = 'default' } = Astro.props;
+
+const getCardClasses = () => {
+  const baseClass = 'card';
+  const classes = [baseClass];
+
+  if (variant === 'enhanced') classes.push('card-enhanced');
+  if (variant === 'accent') classes.push('card-accent', 'accent-block');
+  if (variant === 'accent-subtle') classes.push('accent-block-subtle');
+
+  if (className) classes.push(className);
+
+  return classes.join(' ');
+};
+---
+
+<section class={getCardClasses()}>
+  <slot />
+</section>

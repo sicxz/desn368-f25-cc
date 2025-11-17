@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+
+export interface Props {
+  href: string;
+  icon?: string;
+  iconSize?: number;
+  target?: string;
+  class?: string;
+}
+
+const {
+  href,
+  icon,
+  iconSize = 16,
+  target,
+  class: className = ''
+} = Astro.props;
+
+const classes = ['link-item', className].filter(Boolean).join(' ');
+---
+
+<a href={href} class={classes} target={target}>
+  {icon && <Icon name={icon} size={iconSize} />}
+  <slot />
+</a>
